@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+
+  fifa-data-challenge:
+    container_name: fifa-data-challenge
+    build: docker/fifa
+    platform: linux/amd64
+    volumes:
+      - .:/usr/fifa-data-challenge  
+    working_dir: /usr/fifa-data-challenge/src
+    command: python app.py
